@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>The JavaScript <b>this</b> Keyword</h2>
+
+    <p>Hi <b>this is</b> <b>Andrew Talken</b> here.</p>
+    <p>Check out what this webcite has to offer.</p>
+
+    <p id="demo"></p>
+
+    <script>
+    // Create an object:
+    var person = {
+      firstName: "Andrew",
+      lastName : "Talken",
+      id     : 5566,
+      fullName : function() {
+        return this.firstName + " " + this.lastName;
+      }
+    };
+
+
+    // Display data from the object:
+    document.getElementById("demo").innerHTML = person.fullName();
+    </script>
+
+    <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+    <p id="demo"></p>
+
+    <h2>JavaScript Alert</h2>
+
+<button onclick="myFunction()">Click Me! Do it you!</button>
+
+<script>
+function myFunction() {
+  alert("Why?...Why Did You Click On This Button?");
+}
+</script>
+
+
+<img id="Santa cute" onclick="changeImage()" src="cute.jpg" width="400" height="400">
+
+<p>Click the Santa picture.</p>
+
+<script>
+function changeImage() {
+  var image = document.getElementById('Santa cute');
+  if (image.src.match("cute")) {
+    image.src = "old.jpg";
+  } else {
+    image.src = "cute.jpg";
+  }
+}
+</script>
+
+<img id="pikachu pokemon" onclick="changeImage2()" src="on.jpg" width="400" height="400">
+
+<p>Click the picture.</p>
+
+<script>
+function changeImage2() {
+  var image = document.getElementById('pikachu pokemon');
+  if (image.src.match("on")) {
+    image.src = "dead.jpg";
+  } else {
+    image.src = "on.jpg";
+  }
+}
+</script>
+
+  </body>
+</html>
